@@ -3,7 +3,7 @@ cli tool to share files between devices in the same network by scanning a QR
 > ur mobile must be on same network as the pc or must be able to access the pc's local ip
 
 > zips directories b4 sending
-> 
+
 > no internet connection needed
 ### setup
 ```
