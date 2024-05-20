@@ -1,0 +1,35 @@
+{
+  "name": "qrxfr",
+  "version": "1.0.0",
+  "description": "cli tool to share files between devices in the same network by scanning a QR ",
+  "type": "module",
+  "files": [
+    "public/*",
+    "views/*"
+  ],
+  "bin": {
+    "qrxfr": "./ip.js"
+  },
+  "scripts": {
+    "start": "node ip.js"
+  },
+  "keywords": [
+    "cli",
+    "share",
+    "qr",
+    "scan"
+  ],
+  "author": "htnaver119",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "chalk": "^5.3.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "meow": "^13.2.0",
+    "multer": "^1.4.5-lts.1",
+    "network": "^0.7.0",
+    "qrcode": "^1.5.3",
+    "zlib": "^1.0.5"
+  }
+}
