@@ -6,6 +6,7 @@
   "files": [
     "public/*",
     "views/*",
+    "./index.js",
     "./ip.js"
   ],
   "bin": {
