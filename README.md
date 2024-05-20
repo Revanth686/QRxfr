@@ -17,6 +17,7 @@ npm start
 ### usage
 ```
 qrxfr [options {values}] <path>
+qrxfr [--message MESSAGE]
 qrxfr --help
 ```
 ---
