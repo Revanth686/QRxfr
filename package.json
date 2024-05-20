@@ -5,7 +5,8 @@
   "type": "module",
   "files": [
     "public/*",
-    "views/*"
+    "views/*",
+    "./ip.js"
   ],
   "bin": {
     "qrxfr": "./ip.js"
@@ -13,6 +14,14 @@
   "scripts": {
     "start": "node ip.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Revanth686/QRxfr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Revanth686/QRxfr/issues"
+  },
+  "homepage": "https://github.com/Revanth686/QRxfr/#readme",
   "keywords": [
     "cli",
     "share",
