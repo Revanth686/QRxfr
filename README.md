@@ -8,7 +8,7 @@ cli tool to share files between devices in the same network by scanning a QR
 ### setup
 ```
 git clone
-cd qrxfr
+cd QRxfr
 npm ci
 npm start
 ```
