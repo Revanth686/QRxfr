@@ -12,7 +12,7 @@ cd QRxfr
 npm ci
 npm start
 ```
-### install:
+### install (refrain if non unix platform) :
 `npm install -g qrxfr` || `npx qrxfr` ...
 ### usage
 ```
