@@ -5,6 +5,7 @@ import fs from "fs";
 import QRCode from "qrcode";
 import multer from "multer";
 import chalk from "chalk";
+import { fileURLToPath } from "url";
 
 const downloadServer = express(),
   uploadServer = express();
@@ -17,8 +18,10 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
-uploadServer.use(express.static(new URL("./public", import.meta.url).pathname));
-uploadServer.set("views", new URL("./views", import.meta.url).pathname);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+uploadServer.set("views", path.join(__dirname, "views"));
+uploadServer.use(express.static(path.join(__dirname, "public")));
 uploadServer.set("view engine", "ejs");
 const upload = multer({ storage: storage }).single("file");
 

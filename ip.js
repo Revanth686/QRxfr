@@ -53,7 +53,7 @@ const getSSID = () => {
         .trim();
       return ssid;
     } else if (os === MACOS) {
-      ssid = child_process
+      const ssid = child_process
         .execSync(
           "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'",
         )
@@ -61,13 +61,12 @@ const getSSID = () => {
         .trim();
       return ssid;
     } else if (os === WINDOWS) {
-      //note that if WiFi is not connected, Profile line will not be found and nothing will be returned.
       let interface_info = child_process
         .execSync("netsh.exe wlan show interfaces")
         .toString();
       for (let line of interface_info.split("\n")) {
         if (line.trim().startsWith("Profile")) {
-          ssid = line.split(":")[1].trim();
+          const ssid = line.split(":")[1].trim();
           return ssid;
         }
       }

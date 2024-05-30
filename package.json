@@ -1,6 +1,6 @@
 {
   "name": "qrxfr",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "cli tool to share files between devices in the same network by scanning a QR ",
   "type": "module",
   "files": [
@@ -39,7 +39,6 @@
     "meow": "^13.2.0",
     "multer": "^1.4.5-lts.1",
     "network": "^0.7.0",
-    "qrcode": "^1.5.3",
-    "zlib": "^1.0.5"
+    "qrcode": "^1.5.3"
   }
 }
