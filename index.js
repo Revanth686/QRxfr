@@ -63,7 +63,7 @@ downloadServer.get("/file/:filename", (req, res) => {
   try {
     res.setHeader(
       "Content-Disposition",
-      `attachment; filename=${filename.split(" ").join("")}`,
+      `attachment; filename="${filename.split(" ").join("")}"`,
     );
     const stats = fs.statSync(filePath);
     if (stats.isFile()) {
@@ -78,7 +78,7 @@ downloadServer.get("/file/:filename", (req, res) => {
       res.setHeader(
         "Content-Type",
         "application/zip;",
-        `filename=${filename.split(" ").join("")}.zip`,
+        `filename="${filename.split(" ").join("")}.zip"`,
       );
       const archive = archiver("zip", {
         zlib: { level: 9 },
