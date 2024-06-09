@@ -139,6 +139,8 @@ const main = async () => {
 	`;
   getLocalIpsAvailable(async (err, ips) => {
     if (err) {
+      console.log(chalk.red(`unable to get network interfaces`));
+      process.exit(1);
     } else {
       cli = meow({
         importMeta: import.meta,
