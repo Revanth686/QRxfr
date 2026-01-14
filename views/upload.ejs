@@ -12,7 +12,11 @@
   <body>
     <div class="wrapper">
       <header>QRxfr</header>
-      <form action="#">
+      <form id="message-form" action="/message" method="post">
+        <textarea id="message-input" name="message" placeholder="enter your message" rows="5" cols="30" wrap="soft"></textarea>
+        <button id="message-submit">Send</button>
+      </form>
+      <form id="file-form" action="#">
         <input class="file-input" type="file" name="file" hidden />
         <img id="cloudImg" src="cloud.png"/>
         <p>Browse File to Upload</p>

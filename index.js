@@ -24,6 +24,7 @@ uploadServer.set("views", path.join(__dirname, "views"));
 uploadServer.use(express.static(path.join(__dirname, "public")));
 uploadServer.set("view engine", "ejs");
 const upload = multer({ storage: storage }).single("file");
+uploadServer.use(express.urlencoded({ extended: true }));
 
 const startLogs = (mode) => {
   const date = new Date();
@@ -103,6 +104,12 @@ downloadServer.get("/file/:filename", (req, res) => {
 });
 uploadServer.get("/", (_, res) => {
   res.render("upload");
+});
+uploadServer.post("/message", (req, res) => {
+  res.redirect("/");
+  console.log(
+    `received ${chalk.bold(req.body.message)} from ${chalk.bold(req.ip)}`,
+  );
 });
 
 uploadServer.post(
